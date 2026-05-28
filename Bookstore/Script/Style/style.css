@@ -1,0 +1,406 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI", Tahoma, sans-serif;
+	background: linear-gradient(180deg, #b0c4de 0%, #dfe9f5 100%);
+	color: #1f2937;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 16px;
+}
+
+header {
+	width: 1200px;
+	margin: 0px auto;
+	overflow: hidden;
+	padding: 15px 0;
+}
+
+div#logo {
+	float: left;
+}
+
+div#dn {
+	float: right;
+	margin-top: 15px;
+}
+
+div#dn img {
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-left: 10px;
+}
+
+div#dn a {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+}
+
+header div#dn a:hover {
+	color: #900;
+}
+
+div#body {
+	width: 1200px;
+	margin: 0px auto;
+	background-color: #edeaea;
+	box-shadow:
+		0 4px 8px 0 rgba(0, 0, 0, 0.2),
+		0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+article {
+	display: table-row;
+}
+
+aside#left,
+aside#right,
+section {
+	display: table-cell;
+	vertical-align: top;
+}
+
+aside#left {
+	width: 240px;
+}
+
+section {
+	width: 750px;
+	padding: 0px 8px;
+}
+
+aside#right {
+	width: 200px;
+}
+
+.menu {
+	text-align: center;
+	background: #ffffffd8;
+	border: 1px solid #d7e1ef;
+	border-radius: 12px;
+	padding: 12px;
+	margin-bottom: 14px;
+	box-shadow: 0 4px 14px rgba(31, 41, 55, 0.06);
+}
+.menu a {
+	color: #0b4f89;
+	font-weight: 600;
+	text-decoration: none;
+	margin: 0 6px;
+}
+.menu a:hover {
+	text-decoration: underline;
+}
+.card {
+	background: #fff;
+	border: 1px solid #d7e1ef;
+	border-radius: 12px;
+	box-shadow: 0 4px 14px rgba(31, 41, 55, 0.06);
+	padding: 10px;
+	width: 400px;
+	overflow: hidden;
+	margin-bottom: 14px;
+}
+.embed {
+	width: 100%;
+	border: 0;
+	border-radius: 8px;
+	background: #f8fbff;
+}
+article.layout {
+	display: grid;
+	padding: 20px;
+	grid-template-columns: 1fr 1.5fr 1fr;
+	gap: 14px;
+}
+footer {
+	text-align: center;
+	line-height: 1.6;
+	font-size: 14px;
+}
+@media (max-width: 980px) {
+	article.layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+body.nav-body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+}
+
+body.iframe-body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: transparent !important;
+}
+
+nav {
+	clear: both;
+	background-color: #79b22f;
+	height: 45px;
+}
+
+nav div#subnav {
+	width: 1200px;
+	margin: 0px auto;
+}
+
+nav ul {
+	float: left;
+	list-style: none;
+	margin-left: 50px;
+}
+
+nav ul li {
+	float: left;
+	padding: 11px 15px;
+}
+
+nav ul li a {
+	color: #206ab5;
+	font-size: 16px;
+	font-family: Arial;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav ul li:hover a {
+	border-bottom: 5px solid #206ab5;
+}
+
+nav div#subnav > div {
+	float: right;
+	background-color: white;
+	padding-left: 10px;
+	margin-top: 5px;
+	margin-right: 5px;
+	height: 34px;
+	width: 380px;
+	border: 0.5px solid #ced2dd;
+	border-radius: 5px;
+}
+
+nav div#subnav > div input[type="text"] {
+	float: left;
+	height: 29px;
+	width: 250px;
+	font-size: 14px;
+	border: none;
+}
+
+nav div#subnav > div input[type="submit"] {
+	float: right;
+	height: 100%;
+	width: 80px;
+	background: #f7f2e7;
+	border: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-left: 0.5px solid #ced2dd;
+	font-size: 14px;
+}
+
+nav div#subnav > div input[type="submit"]:hover {
+	cursor: pointer;
+}
+
+.container > nav.card {
+	padding: 0;
+	border: none;
+	box-shadow: none;
+	background: transparent;
+	margin-bottom: 14px;
+}
+
+.container > nav.card iframe.embed {
+	height: 65px;
+	background: transparent;
+}
+
+aside#left > div {
+    border: 1px solid #206AB5;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+aside#left > div > p {
+	background-color: #206ab5;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	height: 25px;
+	padding-top: 5px;
+}
+
+aside#left > div > ul {
+	padding-left: 10px;
+	font-size: 14px;
+	font-family: Arial;
+}
+
+aside#left > div > ul > li {
+	height: 25px;
+	list-style-position: inside;
+	list-style-image: url(../Images/icon_list.jpg);
+}
+
+aside#left > div > ul > li a {
+	color: #206ab5;
+	text-decoration: none;
+	padding-left: 5px;
+}
+
+aside#left > div > ul > li a:hover {
+	color: #ff0000;
+}
+footer {
+    background-color: #79B22F;
+    height: 100px;
+    padding-top: 10px;
+}
+
+footer>p {
+    text-align: center;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+/* --- Right Aside Column --- */
+aside#right>div{  
+	border:1px solid #206AB5;     
+	border-radius:4px;     
+	margin-bottom:30px;  
+}  
+aside#right>div>p{  
+	background-color:#206AB5;     
+	border-top-left-radius:2px;     
+	border-top-right-radius:2px;     
+	text-align:center;     
+	font-size:16px;     
+	color:white;  
+	font-weight:bold;     
+	height:25px;  
+	padding-top:5px;  
+}
+aside#right>div#thongketruycap p {
+	color: red;
+	font-weight: bold;
+	margin: 10px;
+}
+aside#right select {
+	width: 90%;
+	margin: 10px auto;
+	display: block;
+	height: 30px;
+	border-radius: 4px;
+	border: 1px solid #CED2DD;
+	padding: 0 5px;
+}
+aside#right marquee p {
+	margin: 10px;
+	font-size: 13px;
+}
+aside#right marquee a {
+	color: #206AB5;
+	text-decoration: none;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+aside#right marquee img {
+	margin-right: 8px;
+	border: 1px solid #CED2DD;
+}
+
+section>p{  
+	background: linear-gradient(#a5b4c4, #206AB5, #206AB5);    
+	border-top-left-radius:2px;    
+	border-top-right-radius:2px;    
+	text-align:center;    
+	font-size:16px;    
+	font-weight:bold;    
+	color:white;    
+	height:25px;    
+	padding-top:5px;
+	margin-bottom: 10px;
+}  
+
+.sach-container {
+	overflow: hidden;
+	padding: 10px 0;
+}
+
+.sach{     
+	width:240px;  
+	border: 1px dashed #206AB5;
+	border-radius: 4px;
+	margin: 5px 4px 15px 4px;
+	float: left;
+	background-color: #f7f9fc;
+	padding: 10px;
+	text-align: center;
+	box-sizing: border-box;
+	height: 290px;
+}  
+
+.tensach{
+	font-size: 14px;
+	font-weight: bold;
+	height: 42px;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.tensach a{
+	color: #206AB5;
+	text-decoration: none;
+}
+
+.tensach a:hover{
+	text-decoration: underline;
+}
+
+.hinhsach{
+	width: 120px;
+	height: 130px;
+	margin: 5px auto;
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.hinhsach:hover{
+	transform: scale(1.15);
+}
+
+.dongia{
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.gia{     
+	color:red;     
+	font-weight:bold;  
+}  
+
+.nutchonmua {     
+	margin:5px auto;  
+	height:25px;  
+	display: block;
+}

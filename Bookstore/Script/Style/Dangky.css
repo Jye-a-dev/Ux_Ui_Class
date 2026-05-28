@@ -1,0 +1,153 @@
+/* Registration Form Styling */
+
+.dangky-box {
+	background-color: #d7ecfb; /* Light blue background as in screenshot */
+	border: 1px dashed #206ab5; /* Dotted/dashed border surrounding form */
+	border-radius: 6px;
+	padding: 20px;
+	margin: 15px auto;
+	width: 96%;
+}
+
+.form-section {
+	border: 1.5px solid #206ab5;
+	border-radius: 5px;
+	padding: 15px;
+	margin-bottom: 20px;
+	background-color: #e8f4fc;
+}
+
+.form-section legend {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #206ab5;
+	padding: 0 8px;
+}
+
+.form-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.form-table td {
+	padding: 8px 5px;
+	vertical-align: middle;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+
+.label-col {
+	width: 30%;
+	font-weight: bold;
+	color: #333;
+}
+
+.input-col {
+	width: 70%;
+}
+
+.input-text {
+	width: 90%;
+	height: 32px;
+	border: 1px solid #a5b4c4;
+	border-radius: 4px;
+	padding: 0 8px;
+	font-size: 14px;
+	background-color: #ffffff;
+}
+
+.input-text:focus {
+	outline: none;
+	border-color: #206ab5;
+	box-shadow: 0 0 5px rgba(32, 106, 181, 0.3);
+}
+
+.select-dob {
+	height: 32px;
+	border: 1px solid #a5b4c4;
+	border-radius: 4px;
+	padding: 0 5px;
+	background-color: #ffffff;
+	font-size: 14px;
+	margin-right: 5px;
+}
+
+.label-dob {
+	margin-right: 10px;
+	font-size: 13px;
+	color: #333;
+}
+
+.input-year {
+	width: 70px;
+	height: 32px;
+	border: 1px solid #a5b4c4;
+	border-radius: 4px;
+	padding: 0 8px;
+	font-size: 14px;
+	background-color: #ffffff;
+}
+
+.label-radio {
+	font-size: 14px;
+	margin-right: 15px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.form-table input[type="radio"] {
+	vertical-align: middle;
+	margin-right: 4px;
+	cursor: pointer;
+}
+
+.input-textarea {
+	width: 90%;
+	border: 1px solid #a5b4c4;
+	border-radius: 4px;
+	padding: 8px;
+	font-size: 14px;
+	background-color: #ffffff;
+	resize: vertical;
+}
+
+.form-buttons {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.btn-submit,
+.btn-reset {
+	width: 100px;
+	height: 36px;
+	border: none;
+	border-radius: 4px;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 0 10px;
+	transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-submit {
+	background-color: #206ab5;
+}
+
+.btn-submit:hover {
+	background-color: #17528c;
+}
+
+.btn-reset {
+	background-color: #206ab5; 
+}
+
+.btn-reset:hover {
+	background-color: #17528c;
+}
+
+.btn-submit:active,
+.btn-reset:active {
+	transform: scale(0.97);
+}

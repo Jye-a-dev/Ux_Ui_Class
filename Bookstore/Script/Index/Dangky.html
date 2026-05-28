@@ -1,130 +1,196 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Đăng ký</title>
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký thành viên - Nhà sách ABC</title>
+    <link rel="stylesheet" type="text/css" href="../Style/style.css">
+    <link rel="stylesheet" type="text/css" href="../Style/Dangky.css">
+</head>
+<body bgcolor="#B0C4DE">
 
-	<body bgcolor="#B0C4DE">
+<header>
+    <div id="logo">
+        <img src="../Images/logo.jpg" alt="Logo">
+    </div>
+    <div id="dn">
+        <img src="../Images/login.png" alt="Login">
+        <a href="Dangnhap.html">Đăng nhập</a> |
+        <a href="Dangky.html">Đăng ký</a>
+        <img src="../Images/cart.png" alt="Cart">
+        <a href="#">Giỏ hàng (Trống)</a>
+    </div>
+</header>
 
-		<form action="#" name="dangky" method="post">
-			<table align="center" border="1" cellpadding="10" width="500">
-				<tr>
-					<td>
-						<fieldset>
-							<legend>
-								<b>Thông tin cá nhân</b>
-							</legend>
+<nav>
+    <div id="subnav">
+        <ul>
+            <li><a href="Trangchu.html">TRANG CHỦ</a></li>
+            <li><a href="Gioithieu.htm">GIỚI THIỆU</a></li>
+            <li><a href="#">LIÊN HỆ</a></li>
+        </ul>
 
-							<table>
-								<tr>
-									<td>Họ và tên:</td>
-									<td>
-										<input type="text" name="txtHoTen" />
-									</td>
-								</tr>
+        <div>
+            <input type="text" placeholder="Hãy nhập tên sách cần tìm ...">
+            <input type="submit" value="Tìm sách">
+        </div>
+    </div>
+</nav>
 
-								<tr>
-									<td>Ngày sinh:</td>
-									<td>
-										<select name="Ngay">
-											<option value="01">01</option>
-											<option value="02">02</option>
-											<option value="03">03</option>
-											<option value="04">04</option>
-											<option value="05">05</option>
-										</select>
+<div id="body">
+    <article>
+        <!-- Left Column -->
+        <aside id="left">
+            <div>
+                <p>SÁCH THEO CHỦ ĐỀ</p>
+                <ul type="square">
+                    <li><a href="#">Ngoại ngữ</a></li>
+                    <li><a href="#">Công nghệ thông tin</a></li>
+                    <li><a href="#">Luật</a></li>
+                    <li><a href="#">Văn học</a></li>
+                    <li><a href="#">Khoa học kỹ thuật</a></li>
+                    <li><a href="#">Nông nghiệp</a></li>
+                    <li><a href="#">Lịch sử, địa lý</a></li>
+                    <li><a href="#">Kinh tế</a></li>
+                    <li><a href="#">Nghệ thuật sống</a></li>
+                </ul>
+            </div>
 
-										Tháng
+            <div>
+                <p>SÁCH THEO NHÀ XUẤT BẢN</p>
+                <ul type="square">
+                    <li><a href="#">Nhà xuất bản Trẻ</a></li>
+                    <li><a href="#">NXB Thống kê</a></li>
+                    <li><a href="#">Kim đồng</a></li>
+                    <li><a href="#">Đại học quốc gia</a></li>
+                    <li><a href="#">Văn hóa nghệ thuật</a></li>
+                    <li><a href="#">Văn hóa</a></li>
+                    <li><a href="#">Lao động - Xã hội</a></li>
+                    <li><a href="#">Khoa Học & Kỹ Thuật</a></li>
+                </ul>
+            </div>
+        </aside>
 
-										<select name="Thang">
-											<option value="01">01</option>
-											<option value="02">02</option>
-											<option value="03">03</option>
-											<option value="04">04</option>
-											<option value="05">05</option>
-										</select>
+        <!-- Middle Column (Registration Form) -->
+        <section>
+            <p>ĐĂNG KÝ THÀNH VIÊN</p>
+            <div class="dangky-box">
+                <form action="#" name="dangky" method="post">
+                    <fieldset class="form-section">
+                        <legend>Thông tin cá nhân</legend>
+                        <table class="form-table">
+                            <tr>
+                                <td class="label-col">Họ và tên:</td>
+                                <td class="input-col"><input type="text" name="txtHoTen" class="input-text"></td>
+                            </tr>
+                            <tr>
+                                <td class="label-col">Ngày sinh:</td>
+                                <td class="input-col">
+                                    <select name="Ngay" class="select-dob">
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                    </select>
+                                    <span class="label-dob">Tháng</span>
+                                    <select name="Thang" class="select-dob">
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                    </select>
+                                    <span class="label-dob">Năm</span>
+                                    <input type="text" size="5" class="input-year">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-col">Giới tính:</td>
+                                <td class="input-col">
+                                    <input type="radio" name="radGioiTinh" id="male" value="Nam" checked>
+                                    <label for="male" class="label-radio">Nam</label>
+                                    <input type="radio" name="radGioiTinh" id="female" value="Nữ">
+                                    <label for="female" class="label-radio">Nữ</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-col">Địa chỉ:</td>
+                                <td class="input-col"><textarea rows="3" class="input-textarea"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="label-col">Điện thoại:</td>
+                                <td class="input-col"><input type="tel" name="txtDienThoai" class="input-text"></td>
+                            </tr>
+                            <tr>
+                                <td class="label-col">Email:</td>
+                                <td class="input-col"><input type="email" name="txtEmail" required class="input-text"></td>
+                            </tr>
+                        </table>
+                    </fieldset>
 
-										Năm
-										<input type="text" size="5" />
-									</td>
-								</tr>
+                    <fieldset class="form-section">
+                        <legend>Thông tin đăng nhập</legend>
+                        <table class="form-table">
+                            <tr>
+                                <td class="label-col">Tên đăng nhập:</td>
+                                <td class="input-col"><input type="text" required class="input-text"></td>
+                            </tr>
+                            <tr>
+                                <td class="label-col">Mật khẩu:</td>
+                                <td class="input-col"><input type="password" required class="input-text"></td>
+                            </tr>
+                            <tr>
+                                <td class="label-col">Nhập lại mật khẩu:</td>
+                                <td class="input-col"><input type="password" required class="input-text"></td>
+                            </tr>
+                        </table>
+                    </fieldset>
 
-								<tr>
-									<td>Giới tính:</td>
-									<td>
-										<input type="radio" name="radGioiTinh" value="Nam" checked />
-										Nam
+                    <div class="form-buttons">
+                        <input type="submit" value="Đăng ký" class="btn-submit">
+                        <input type="reset" value="Hủy" class="btn-reset">
+                    </div>
+                </form>
+            </div>
+        </section>
 
-										<input type="radio" name="radGioiTinh" value="Nữ" />
-										Nữ
-									</td>
-								</tr>
+        <!-- Right Column -->
+        <aside id="right">
+            <div id="sachbannhieu">
+                <p>SÁCH BÁN NHIỀU</p>
+                <marquee direction="up" scrollamount="3" scrolldelay="100" onMouseMove="stop()" onMouseOut="start()">
+                    <p><a href="#"><img src="../Images/Sach/TH008.jpg" width="70" alt="Sách 1">Thủ Thuật Lập Trình Visual Basic 6</a></p>
+                    <p><a href="#"><img src="../Images/Sach/TH005.jpg" width="70" alt="Sách 2">Hướng Dẫn Tự Học Photoshop CS (Photoshop 6.0)</a></p>
+                    <p><a href="#"><img src="../Images/Sach/TH002.jpg" width="70" alt="Sách 3">Căn Bản Về Photoshop CS</a></p>
+                    <p><a href="#"><img src="../Image/thcb.png" width="70" alt="Sách 4">Tin học Cơ bản</a></p>
+                </marquee>
+            </div>
 
-								<tr>
-									<td>Địa chỉ:</td>
-									<td>
-										<textarea rows="4" cols="30"></textarea>
-									</td>
-								</tr>
+            <div id="lienketwebsite">
+                <p>LIÊN KẾT WEBSITE</p>
+                <select onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
+                    <option selected>---- Chọn trang liên kết ----</option>
+                    <option value="https://www.vlu.edu.vn">ĐH Văn Lang</option>
+                    <option value="https://www.vlu.edu.vn/faculty/khoa-cong-nghe-thong-tin">Khoa KT-CN</option>
+                </select>
+            </div>
 
-								<tr>
-									<td>Điện thoại:</td>
-									<td>
-										<input type="tel" name="txtDienThoai" />
-									</td>
-								</tr>
+            <div id="thongketruycap">
+                <p>THỐNG KÊ TRUY CẬP</p>
+                <div style="padding: 10px; font-family: Arial; font-size: 14px;">
+                    <p style="color: red; font-weight: bold; margin-bottom: 5px;">Tổng truy cập: 160</p>
+                    <p style="color: red; font-weight: bold;">Đang online: 3</p>
+                </div>
+            </div>
+        </aside>
+    </article>
+</div>
 
-								<tr>
-									<td>Email:</td>
-									<td>
-										<input type="email" name="txtEmail" required />
-									</td>
-								</tr>
-							</table>
-						</fieldset>
+<footer>
+    <p>©2016 - Nhà sách ABC. Allright Reserved</p>
+    <p>Website được phát triển để sử dụng làm bài tập thực hành môn Thiết kế và Lập trình Web</p>
+    <p>Email: abc.thudaumotuniversity@gmail.com</p>
+</footer>
 
-						<br />
-
-						<fieldset>
-							<legend>
-								<b>Thông tin đăng nhập</b>
-							</legend>
-
-							<table>
-								<tr>
-									<td>Tên đăng nhập:</td>
-									<td>
-										<input type="text" required />
-									</td>
-								</tr>
-
-								<tr>
-									<td>Mật khẩu:</td>
-									<td>
-										<input type="password" required />
-									</td>
-								</tr>
-
-								<tr>
-									<td>Nhập lại mật khẩu:</td>
-									<td>
-										<input type="password" required />
-									</td>
-								</tr>
-							</table>
-						</fieldset>
-
-						<br />
-
-						<div align="center">
-							<input type="submit" value="Đăng ký" />
-							<input type="reset" value="Hủy" />
-						</div>
-					</td>
-				</tr>
-			</table>
-		</form>
-	</body>
+</body>
 </html>
-

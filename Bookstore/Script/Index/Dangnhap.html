@@ -2,44 +2,157 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng nhập</title>
+    <title>Đăng nhập - Nhà sách ABC</title>
+    <link rel="stylesheet" type="text/css" href="../Style/style.css">
+    <link rel="stylesheet" type="text/css" href="../Style/Dangky.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<body>
 
-<body bgcolor="#B0C4DE">
+    <!-- Header -->
+    <header>
+        <div id="logo">
+            <a href="Trangchu.html"><img src="../../Image/logo.png" alt="Logo"></a>
+        </div>
+        <div id="dn">
+            <a href="Dangnhap.html">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+                Đăng nhập
+            </a>
+            <a href="Dangky.html">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                Đăng ký
+            </a>
+            <a href="#" class="btn-cart">
+                <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Giỏ hàng <span class="cart-count">(Trống)</span>
+            </a>
+        </div>
+    </header>
 
-    <form action="#" name="dangnhap" method="post">
+    <!-- Nav -->
+    <nav>
+        <div id="subnav">
+            <button class="nav-toggle" id="navToggle">☰ Menu</button>
+            <ul id="navMenu">
+                <li><a href="Trangchu.html" id="menu-home">TRANG CHỦ</a></li>
+                <li><a href="Gioithieu.htm" id="menu-about">GIỚI THIỆU</a></li>
+                <li><a href="Dangnhap.html" class="active" id="menu-login">ĐĂNG NHẬP</a></li>
+                <li><a href="Dangky.html" id="menu-register">ĐĂNG KÝ</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" name="tsearch" placeholder="Hãy nhập tên sách cần tìm ...">
+                <button type="submit">Tìm sách</button>
+            </div>
+        </div>
+    </nav>
 
-        <table border="1" cellspacing="0" width="350" align="center">
+    <!-- Main Content Body -->
+    <div id="body">
+        <article>
+            <!-- Left Sidebar -->
+            <aside id="left">
+                <div>
+                    <p>SÁCH THEO CHỦ ĐỀ</p>
+                    <ul>
+                        <li><a href="#">Ngoại ngữ</a></li>
+                        <li><a href="#">Công nghệ thông tin</a></li>
+                        <li><a href="#">Luật</a></li>
+                        <li><a href="#">Văn học</a></li>
+                        <li><a href="#">Khoa học kỹ thuật</a></li>
+                        <li><a href="#">Nông nghiệp</a></li>
+                        <li><a href="#">Lịch sử, địa lý</a></li>
+                        <li><a href="#">Kinh tế</a></li>
+                        <li><a href="#">Nghệ thuật sống</a></li>
+                    </ul>
+                </div>
 
-            <tr>
-                <td colspan="2" align="center">
-                    <b><font size="6">ĐĂNG NHẬP</font></b>
-                </td>
-            </tr>
+                <div>
+                    <p>SÁCH THEO NHÀ XUẤT BẢN</p>
+                    <ul>
+                        <li><a href="#">Nhà xuất bản Trẻ</a></li>
+                        <li><a href="#">NXB Thống kê</a></li>
+                        <li><a href="#">Kim đồng</a></li>
+                        <li><a href="#">Đại học quốc gia</a></li>
+                        <li><a href="#">Văn hóa nghệ thuật</a></li>
+                        <li><a href="#">Văn hóa</a></li>
+                        <li><a href="#">Lao động - Xã hội</a></li>
+                        <li><a href="#">Khoa Học & Kỹ Thuật</a></li>
+                    </ul>
+                </div>
+            </aside>
 
-            <tr>
-                <td>Tên đăng nhập:</td>
-                <td>
-                    <input type="text" name="txtTenDangNhap">
-                </td>
-            </tr>
+            <!-- Login Form Area -->
+            <section>
+                <p>ĐĂNG NHẬP HỆ THỐNG</p>
+                <div class="dangky-box" style="max-width: 480px; margin: 30px auto;">
+                    <form action="#" name="dangnhap" method="post">
+                        <table class="form-table">
+                            <tr>
+                                <td class="label-col" style="width: 35%;">Tên đăng nhập:</td>
+                                <td class="input-col" style="width: 65%;">
+                                    <input type="text" name="txtTenDangNhap" class="input-text" required placeholder="Nhập tài khoản...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-col">Mật khẩu:</td>
+                                <td class="input-col">
+                                    <input type="password" name="txtMatKhau" class="input-text" required placeholder="Nhập mật khẩu...">
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="form-buttons">
+                            <input type="submit" value="Đăng nhập" class="btn-submit" style="width: 140px;">
+                        </div>
+                    </form>
+                </div>
+            </section>
 
-            <tr>
-                <td>Mật khẩu:</td>
-                <td>
-                    <input type="password" name="txtMatKhau">
-                </td>
-            </tr>
+            <!-- Right Sidebar -->
+            <aside id="right">
+                <div id="sachbannhieu">
+                    <p>SÁCH BÁN NHIỀU</p>
+                    <marquee direction="up" scrollamount="2" scrolldelay="100" onMouseMove="stop()" onMouseOut="start()">
+                        <p><a href="Chitietsanpham.html"><img src="../../Image/thcb.png" alt="Sách 1"><span>Thủ Thuật Lập Trình Visual Basic 6</span></a></p>
+                        <p><a href="Chitietsanpham.html"><img src="../../Image/thcb.png" alt="Sách 2"><span>Hướng Dẫn Tự Học Photoshop CS</span></a></p>
+                        <p><a href="Chitietsanpham.html"><img src="../../Image/thcb.png" alt="Sách 3"><span>Căn Bản Về Photoshop CS</span></a></p>
+                        <p><a href="Chitietsanpham.html"><img src="../../Image/thcb.png" alt="Sách 4"><span>Tin học Cơ bản</span></a></p>
+                    </marquee>
+                </div>
 
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="Đăng nhập">
-                </td>
-            </tr>
+                <div id="lienketwebsite">
+                    <p>LIÊN KẾT WEBSITE</p>
+                    <select onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
+                        <option selected>---- Chọn trang liên kết ----</option>
+                        <option value="https://www.vlu.edu.vn">ĐH Văn Lang</option>
+                        <option value="https://www.vlu.edu.vn/faculty/khoa-cong-nghe-thong-tin">Khoa KT-CN</option>
+                    </select>
+                </div>
 
-        </table>
+                <div id="thongketruycap">
+                    <p>THỐNG KÊ TRUY CẬP</p>
+                    <div class="stats-content">
+                        <p><span>Tổng truy cập:</span> <strong>160</strong></p>
+                        <p><span>Đang online:</span> <strong>3</strong></p>
+                    </div>
+                </div>
+            </aside>
+        </article>
+    </div>
 
-    </form>
+    <!-- Footer -->
+    <footer>
+        <p>©2016 - Nhà sách ABC. Allright Reserved</p>
+        <p>Website được phát triển để sử dụng làm bài tập thực hành môn Thiết kế và Lập trình Web</p>
+        <p>Email: abc.thudaumotuniversity@gmail.com</p>
+    </footer>
 
+    <!-- Interactive Navigation Toggle Script -->
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function() {
+            var menu = document.getElementById('navMenu');
+            menu.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>

@@ -6,23 +6,31 @@
     <link rel="stylesheet" type="text/css" href="../Style/style.css">
     <base target="_parent">
 </head>
-<body bgcolor="#B0C4DE" class="nav-body">
+<body class="nav-body">
 
 <nav>
     <div id="subnav">
-        <ul>
-            <li><a href="Trangchu.html">TRANG CHỦ</a></li>
-            <li><a href="Chitietsanpham.html">CHI TIẾT SẢN PHẨM</a></li>
+        <button class="nav-toggle" id="navToggle">☰ Menu</button>
+        <ul id="navMenu">
+            <li><a href="Trangchu.html" class="active">TRANG CHỦ</a></li>
+            <li><a href="Gioithieu.htm">GIỚI THIỆU</a></li>
             <li><a href="Dangnhap.html">ĐĂNG NHẬP</a></li>
             <li><a href="Dangky.html">ĐĂNG KÝ</a></li>
         </ul>
 
-        <div>
-            <input type="text" size="36" name="tsearch" placeholder="Hãy nhập tên sách cần tìm ...">
-            <input type="submit" value="Tìm sách" title="Tìm sách">
+        <div class="search-box">
+            <input type="text" name="tsearch" placeholder="Hãy nhập tên sách cần tìm ...">
+            <button type="submit">Tìm sách</button>
         </div>
     </div>
 </nav>
+
+<script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+        var menu = document.getElementById('navMenu');
+        menu.classList.toggle('show');
+    });
+</script>
 
 </body>
 </html>

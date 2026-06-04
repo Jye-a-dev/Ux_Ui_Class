@@ -1,106 +1,328 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Chi tiết sản phẩm</title>
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết sản phẩm - Nhà sách ABC</title>
+    <link rel="stylesheet" type="text/css" href="../Style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .detail-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .detail-image {
+            flex: 0 0 200px;
+            text-align: center;
+        }
+        .detail-image img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            padding: 8px;
+            background: #ffffff;
+            transition: transform 0.3s ease;
+        }
+        .detail-image img:hover {
+            transform: scale(1.03);
+        }
+        .detail-info {
+            flex: 1;
+        }
+        .detail-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        .info-table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .info-table tr {
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .info-table tr:last-child {
+            border-bottom: none;
+        }
+        .info-table td {
+            padding: 8px 0;
+            font-size: 14.5px;
+        }
+        .info-table td.label {
+            font-weight: 600;
+            color: #64748b;
+            width: 130px;
+        }
+        .info-table td.value {
+            color: #334155;
+        }
+        .info-table td.value strong {
+            color: #2563eb;
+        }
+        .buy-action {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 16px 20px;
+            border: 1px solid #e2e8f0;
+            margin-top: 10px;
+        }
+        .buy-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ef4444;
+        }
+        .buy-btn-large {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 24px;
+            font-weight: 700;
+            font-size: 14.5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(16, 185, 129, 0.15);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .buy-btn-large:hover {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.25);
+        }
+        .description-box {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+        }
+        .description-box h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        .description-box p {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: #475569;
+        }
+        .chapter-list {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        .chapter-list li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
 
-	<body bgcolor="#B0C4DE">
+        @media (max-width: 640px) {
+            .detail-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .detail-image {
+                width: 160px;
+            }
+            .buy-action {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
 
-		<table border="1" cellspacing="0" width="500" align="center">
-			<tr bgcolor="#D8BFD8">
-				<td colspan="2" align="center">
-					<b>
-						<font size="6" color="blue">GIÁO TRÌNH TIN HỌC CƠ BẢN</font>
-					</b>
-				</td>
-			</tr>
+    <!-- Header -->
+    <header>
+        <div id="logo">
+            <a href="Trangchu.html"><img src="../../Image/logo.png" alt="Logo"></a>
+        </div>
+        <div id="dn">
+            <a href="Dangnhap.html">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+                Đăng nhập
+            </a>
+            <a href="Dangky.html">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                Đăng ký
+            </a>
+            <a href="#" class="btn-cart">
+                <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Giỏ hàng <span class="cart-count">(Trống)</span>
+            </a>
+        </div>
+    </header>
 
-			<tr>
-				<td rowspan="6" align="center">
-					<img src="../../Image/thcb.png" width="150" />
-				</td>
+    <!-- Nav -->
+    <nav>
+        <div id="subnav">
+            <button class="nav-toggle" id="navToggle">☰ Menu</button>
+            <ul id="navMenu">
+                <li><a href="Trangchu.html" id="menu-home">TRANG CHỦ</a></li>
+                <li><a href="Gioithieu.htm" id="menu-about">GIỚI THIỆU</a></li>
+                <li><a href="Dangnhap.html" id="menu-login">ĐĂNG NHẬP</a></li>
+                <li><a href="Dangky.html" id="menu-register">ĐĂNG KÝ</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" name="tsearch" placeholder="Hãy nhập tên sách cần tìm ...">
+                <button type="submit">Tìm sách</button>
+            </div>
+        </div>
+    </nav>
 
-				<td>
-					Tác giả:
-					<i>Phạm Công Anh</i>
-				</td>
-			</tr>
+    <!-- Main Content Body -->
+    <div id="body">
+        <article>
+            <!-- Left Sidebar -->
+            <aside id="left">
+                <div>
+                    <p>SÁCH THEO CHỦ ĐỀ</p>
+                    <ul>
+                        <li><a href="#">Ngoại ngữ</a></li>
+                        <li><a href="#">Công nghệ thông tin</a></li>
+                        <li><a href="#">Luật</a></li>
+                        <li><a href="#">Văn học</a></li>
+                        <li><a href="#">Khoa học kỹ thuật</a></li>
+                        <li><a href="#">Nông nghiệp</a></li>
+                        <li><a href="#">Lịch sử, địa lý</a></li>
+                        <li><a href="#">Kinh tế</a></li>
+                        <li><a href="#">Nghệ thuật sống</a></li>
+                    </ul>
+                </div>
 
-			<tr>
-				<td>
-					Đồng tác giả:
-					<i>Lê Việt Nhân</i>
-				</td>
-			</tr>
+                <div>
+                    <p>SÁCH THEO NHÀ XUẤT BẢN</p>
+                    <ul>
+                        <li><a href="#">Nhà xuất bản Trẻ</a></li>
+                        <li><a href="#">NXB Thống kê</a></li>
+                        <li><a href="#">Kim đồng</a></li>
+                        <li><a href="#">Đại học quốc gia</a></li>
+                        <li><a href="#">Văn hóa nghệ thuật</a></li>
+                        <li><a href="#">Văn hóa</a></li>
+                        <li><a href="#">Lao động - Xã hội</a></li>
+                        <li><a href="#">Khoa Học & Kỹ Thuật</a></li>
+                    </ul>
+                </div>
+            </aside>
 
-			<tr>
-				<td>
-					Hiệu đính:
-					<i>Hồng Phúc</i>
-				</td>
-			</tr>
+            <!-- Product Details Section -->
+            <section>
+                <p>Chi tiết sản phẩm</p>
+                <div class="detail-container">
+                    <div class="detail-image">
+                        <img src="../../Image/thcb.png" alt="Giáo trình tin học cơ bản">
+                    </div>
+                    <div class="detail-info">
+                        <h2 class="detail-title">GIÁO TRÌNH TIN HỌC CƠ BẢN</h2>
+                        <table class="info-table">
+                            <tr>
+                                <td class="label">Tác giả:</td>
+                                <td class="value">Phạm Công Anh</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Đồng tác giả:</td>
+                                <td class="value">Lê Việt Nhân</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Hiệu đính:</td>
+                                <td class="value">Hồng Phúc</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Chủ biên:</td>
+                                <td class="value">Quách Tuấn Ngọc</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Nhà xuất bản:</td>
+                                <td class="value"><strong>Nhà xuất bản Trẻ</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Chủ đề:</td>
+                                <td class="value"><strong>Triết học - Chính trị</strong></td>
+                            </tr>
+                        </table>
+                        <div class="buy-action">
+                            <div class="buy-price">Đơn giá: 26,000 VNĐ</div>
+                            <button class="buy-btn-large">
+                                <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                                Chọn mua
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-			<tr>
-				<td>
-					Chủ biên:
-					<i>Quách Tuấn Ngọc</i>
-				</td>
-			</tr>
+                <div class="description-box">
+                    <h3>Nội dung của cuốn sách:</h3>
+                    <p>
+                        <strong>Tin Học Cơ Bản Windows XP</strong> gồm có 7 chương chính:
+                    </p>
+                    <ul class="chapter-list">
+                        <li><strong>Chương 1:</strong> Một số vấn đề cơ bản.</li>
+                        <li><strong>Chương 2:</strong> Sử dụng nhanh thanh công cụ và thanh thực đơn trong My Computer và Windows Explorer.</li>
+                        <li><strong>Chương 3:</strong> Các thao tác trong Windows XP.</li>
+                        <li><strong>Chương 4:</strong> Các thiết lập trong Windows XP.</li>
+                        <li><strong>Chương 5:</strong> Bảo trì máy tính.</li>
+                        <li><strong>Chương 6:</strong> Các phím tắt.</li>
+                        <li><strong>Chương 7:</strong> Hỏi và đáp các thắc mắc.</li>
+                    </ul>
+                </div>
+            </section>
 
-			<tr>
-				<td>
-					Nhà xuất bản:
-					<font color="red"><b>Nhà xuất bản Trẻ</b></font>
-				</td>
-			</tr>
+            <!-- Right Sidebar -->
+            <aside id="right">
+                <div id="sachbannhieu">
+                    <p>SÁCH BÁN NHIỀU</p>
+                    <marquee direction="up" scrollamount="2" scrolldelay="100" onMouseMove="stop()" onMouseOut="start()">
+                        <p><a href="Chitietsanpham.html"><img src="../../Image/thcb.png" alt="Sách 1"><span>Thủ Thuật Lập Trình Visual Basic 6</span></a></p>
+                        <p><a href="Chitietsanpham.html"><img src="../../Image/thcb.png" alt="Sách 2"><span>Hướng Dẫn Tự Học Photoshop CS</span></a></p>
+                        <p><a href="Chitietsanpham.html"><img src="../../Image/thcb.png" alt="Sách 3"><span>Căn Bản Về Photoshop CS</span></a></p>
+                        <p><a href="Chitietsanpham.html"><img src="../../Image/thcb.png" alt="Sách 4"><span>Tin học Cơ bản</span></a></p>
+                    </marquee>
+                </div>
 
-			<tr>
-				<td>
-					Chủ đề:
-					<font color="red"><b>Triết học-Chính trị</b></font>
-				</td>
-			</tr>
+                <div id="lienketwebsite">
+                    <p>LIÊN KẾT WEBSITE</p>
+                    <select onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
+                        <option selected>---- Chọn trang liên kết ----</option>
+                        <option value="https://www.vlu.edu.vn">ĐH Văn Lang</option>
+                        <option value="https://www.vlu.edu.vn/faculty/khoa-cong-nghe-thong-tin">Khoa KT-CN</option>
+                    </select>
+                </div>
 
-			<tr>
-				<td colspan="2">
-					<b>Nội dung của cuốn:</b>
-					<br />
-					<br />
+                <div id="thongketruycap">
+                    <p>THỐNG KÊ TRUY CẬP</p>
+                    <div class="stats-content">
+                        <p><span>Tổng truy cập:</span> <strong>160</strong></p>
+                        <p><span>Đang online:</span> <strong>3</strong></p>
+                    </div>
+                </div>
+            </aside>
+        </article>
+    </div>
 
-					Tin Học Cơ Bản Windows XP gồm có 7 chương:
-					<br />
-					Chương 1: Một số vấn đề cơ bản.
-					<br />
-					Chương 2: Sử dụng nhanh thanh công cụ và thanh thực đơn trong My Computer và Windows Explorer.
-					<br />
-					Chương 3: Các thao tác trong Windows XP.
-					<br />
-					Chương 4: Các thiết lập trong Windows XP.
-					<br />
-					Chương 5: Bảo trì máy tính.
-					<br />
-					Chương 6: Các phím tắt.
-					<br />
-					Chương 7: Hỏi và đáp các thắc mắc.
-				</td>
-			</tr>
+    <!-- Footer -->
+    <footer>
+        <p>©2016 - Nhà sách ABC. Allright Reserved</p>
+        <p>Website được phát triển để sử dụng làm bài tập thực hành môn Thiết kế và Lập trình Web</p>
+        <p>Email: abc.thudaumotuniversity@gmail.com</p>
+    </footer>
 
-			<tr>
-				<td colspan="2" align="right">
-					Giá bán:
-					<font color="red">
-						<b>26,000 VNĐ/Cuốn</b>
-					</font>
-				</td>
-			</tr>
-
-			<tr>
-				<td colspan="2" align="right">
-					<img src="Images/datmua.png" alt="Đặt mua" />
-				</td>
-			</tr>
-		</table>
-	</body>
+    <!-- Interactive Navigation Toggle Script -->
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function() {
+            var menu = document.getElementById('navMenu');
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
 </html>
-
